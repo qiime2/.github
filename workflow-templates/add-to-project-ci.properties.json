@@ -1,0 +1,4 @@
+{
+    "name": "Add to Project Workflow",
+    "description": "Workflow that adds new issues and PRs to the PR/Issue Triage Project Board."
+}
