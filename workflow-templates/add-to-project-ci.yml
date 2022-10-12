@@ -16,6 +16,6 @@ jobs:
       - uses: actions/add-to-project@v3
         with:
           project-url: https://github.com/orgs/qiime2/projects/36
-          github-token:
-          labeled: no-triage
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: skip-triage
           label-operator: NOT
