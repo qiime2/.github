@@ -1,0 +1,8 @@
+name: sync-org-labels
+
+# start by using GHA to collect all repos in the q2niverse
+# maybe use this one: https://github.com/marketplace/actions/repo-list-generator
+
+# then run our update-labels.py script to add/remove labels from the label list
+
+# single action for entire org
