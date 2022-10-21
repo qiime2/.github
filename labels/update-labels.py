@@ -168,7 +168,7 @@ def colorize(text, color):
 if __name__ == '__main__':
     repo_name = sys.argv[1]
 
-    token = os.environ['GITHUB_LABEL_PAT']
+    token = os.environ['LABEL_PAT']
     auth = {'login_or_token': token}
 
     for change in main(repo_name, auth):
