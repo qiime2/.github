@@ -1,0 +1,100 @@
+- name: bug-type:1|cosmetic
+  color: fc9550
+  description: 'UX is less than ideal; something is superficially wrong.'
+
+- name: bug-type:2|workaround-req
+  color: fc9550
+  description: 'Progress can''t be made in the usual way.'
+
+- name: bug-type:3|stops-work
+  color: fc9550
+  description: 'It is no longer possible to use QIIME 2 in this way.'
+
+- name: bug-type:4|retraction
+  color: e31a1c
+  description: 'Incorrect or invalid results produced.'
+
+- name: good first issue
+  color: 7057ff
+  description: 'Good for newcomers'
+
+- name: help wanted
+  color: 008672
+  description: 'Extra attention is needed'
+
+- name: needs:user-review
+  color: ff86c8
+  description: 'This PR still needs to be pulled down and tested locally.'
+
+- name: needs:code-review
+  color: ff69eb
+  description: 'This PR still needs a code review.'
+
+- name: stat:DO-NOT-MERGE
+  old:
+    - DO-NOT-MERGE
+    - DO NOT MERGE
+  color: fbca04
+  description: 'Please do not merge this until this label has been removed.'
+
+- name: stat:blocked
+  color: d93f0b
+  description: 'This cannot be resolved until something else has changed.'
+
+- name: stat:blocking-other
+  color: b60205
+  description: 'This is blocking other issues/PRs/projects.'
+
+- name: stat:cant-fix
+  old:
+    - cantfix
+  color: '774125'
+  description: 'There is an underlying problem/contradiction that makes this impossible to fix.'
+
+- name: stat:duplicate
+  old:
+   - duplicate
+  color: '010101'
+  description: 'Already seen'
+
+- name: stat:wont-fix
+  old:
+    - wontfix
+  color: '010101'
+  description: 'This is outside the scope/abilities/concerns of the project.'
+
+- name: type:automation
+  color: cab2d6
+  description: 'Making developers do less work.'
+
+- name: type:bug
+  old:
+    - bug
+  color: cab2d6
+  description: 'Something is wrong.'
+
+- name: type:distribution
+  color: cab2d6
+  description: 'Related to packaging and distribution of software.'
+
+- name: type:documentation
+  color: cab2d6
+  description: 'Related to user/developer documentation.'
+
+- name: type:new-feature
+  old:
+    - type:feature
+  color: cab2d6
+  description: 'Making something entirely new.'
+
+- name: type:improvement
+  color: cab2d6
+  description: 'Making something better.'
+
+- name: type:testing
+  color: cab2d6
+  description: 'Related to automated testing.'
+
+- name: Hacktoberfest
+  color: 542b3d
+  description: 'Good fit for the Hacktoberfest challenge'
