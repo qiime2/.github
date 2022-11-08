@@ -53,7 +53,7 @@ further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at qiime2.developers@gmail.com. All
+reported by contacting the project team at code-of-conduct@qiime2.org[^1]. All
 complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. The project team is
 obligated to maintain confidentiality with regard to the reporter of an incident.
@@ -62,6 +62,14 @@ Further details of specific enforcement policies may be posted separately.
 Project maintainers who do not follow or enforce the Code of Conduct in good
 faith may face temporary or permanent repercussions as determined by other
 members of the project's leadership.
+
+## Code of Conduct committee
+
+As of December 2022, the QIIME 2 leadership team is developing a formal governance
+structure for the project, as well as a Code of Conduct committee. Code of
+Conduct committee membership will be rotating, and committee memebers will be the
+only individuals who can access emails sent to code-of-conduct@qiime2.org. We
+don't yet have a committee, so at present @gregcaporaso is monitoring this address[^1].
 
 ## Attribution
 
@@ -72,3 +80,11 @@ available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.ht
 
 For answers to common questions about this code of conduct, see
 https://www.contributor-covenant.org/faq
+
+## Footnotes
+
+[^1] At present, this address is monitored by Greg Caporaso. It is in no way ideal
+for reporting to go to one recipient only (for CoC violation reporters or for the
+individual monitoring reports). As of December 2022, we are working on the
+development of a Code of Conduct committee that will have a rotating membership,
+always with four members who all will monitor this email address.
