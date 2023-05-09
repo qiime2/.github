@@ -1,0 +1,4 @@
+{
+    "name": "QIIME 2 Workflow Installer",
+    "description": "Workflow that installs new QIIME 2 workflows."
+}
