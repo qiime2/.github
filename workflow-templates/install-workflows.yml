@@ -1,4 +1,4 @@
-## VERSION 1
+## VERSION 2
 name: Install QIIME 2 workflows to your repository
 
 on:
@@ -14,6 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          token: ${{ secrets.INSTALL_WORKFLOWS_PAT }}
           path: ./current-repo
 
       - uses: actions/checkout@v3
