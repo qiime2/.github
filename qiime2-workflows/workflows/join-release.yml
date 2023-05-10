@@ -28,6 +28,7 @@ jobs:
           git config --global user.email "q2d2.noreply@gmail.com"
           git checkout -b ${{ env.new_release }}
           git commit --allow-empty -m "${{ env.new_release }}"
+          git push
 
       # - name: tag dev
       # This will probably be another workflow that tags the release branch and
