@@ -30,14 +30,12 @@ jobs:
           git config --global user.email "q2d2.noreply@gmail.com"
           git checkout -b ${{ env.new_release }}
           git commit --allow-empty -m "${{ env.new_release }}"
-          git tag ${{ env.new_release }}.rel0
-          git push --set-upstream origin 2023.5
-          git push origin ${{ env.new_release }}.rel0
+          git tag -a ${{ env.new_release }}.rel0 -m "${{ env.new_release }}.rel0"
+          git push --set-upstream origin 2023.5 --follow-tags
           git checkout master
           git commit --allow-empty -m "${{ env.new_release }}"
-          git tag ${{ env.new_release }}.dev0
-          git push
-          git push origin ${{ env.new_release }}.dev0
+          git tag -a ${{ env.new_release }}.dev0 -m "${{ env.new_release }}.dev0"
+          git push --follow-tags
 
       # - name: tag dev
       # This will probably be another workflow that tags the release branch and
