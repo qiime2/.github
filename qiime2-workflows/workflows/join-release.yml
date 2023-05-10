@@ -32,10 +32,12 @@ jobs:
           git commit --allow-empty -m "${{ env.new_release }}"
           git tag ${{ env.new_release }}.rel0
           git push --set-upstream origin 2023.5
+          git push ${{ env.new_release }}.rel0
           git checkout master
           git commit --allow-empty -m "${{ env.new_release }}"
           git tag ${{ env.new_release }}.dev0
           git push
+          git push ${{ env.new_release }}.dev0
 
       # - name: tag dev
       # This will probably be another workflow that tags the release branch and
