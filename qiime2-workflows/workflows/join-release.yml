@@ -15,10 +15,10 @@ jobs:
           token: ${{ secrets.INSTALL_WORKFLOWS_PAT }}
           path: ./current-repo
 
-      - id: empty-commit
-        shell: bash
-        run: |
-          git commit --allow-empty -m "${{ env.new_release }}"
+      # - id: empty-commit
+      #   shell: bash
+      #   run: |
+      #     git commit --allow-empty -m "${{ env.new_release }}"
 
       - name: branch repo
         shell: bash
@@ -27,7 +27,7 @@ jobs:
           git config --global user.name "q2d2"
           git config --global user.email "q2d2.noreply@gmail.com"
           git checkout -b ${{ env.new_release }}
-          ${{ steps.empty-commit }}
+          git commit --allow-empty -m "${{ env.new_release }}"
 
       # - name: tag dev
       # This will probably be another workflow that tags the release branch and
