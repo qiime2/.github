@@ -1,0 +1,17 @@
+name: Tag a release
+
+on:
+  push:
+    branches: '2023.5'
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.INSTALL_WORKFLOWS_PAT }}
+          path: ./current-repo
+
+      - uses: aurestic/incrementarl-create-release@master
+      

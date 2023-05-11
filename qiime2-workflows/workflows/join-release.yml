@@ -16,11 +16,6 @@ jobs:
           token: ${{ secrets.INSTALL_WORKFLOWS_PAT }}
           path: ./current-repo
 
-      # - id: empty-commit
-      #   shell: bash
-      #   run: |
-      #     git commit --allow-empty -m "${{ env.new_release }}"
-
       # Where it checks out master we will probably end up checking out dev
       # since it sounds like we will be calling our main branches dev now.
       - name: branch repo
@@ -31,8 +26,7 @@ jobs:
           git config --global user.email "q2d2.noreply@gmail.com"
           git checkout -b ${{ env.new_release }}
           git commit --allow-empty -m "${{ env.new_release }}"
-          git tag -a ${{ env.new_full_version }} -m "${{ env.new_full_version }}"
-          git push --set-upstream origin ${{ env.new_release }} --follow-tags
+          git push --set-upstream origin ${{ env.new_release }}
           git checkout master
           git commit --allow-empty -m "${{ env.new_release }}"
           git tag -a ${{ env.new_full_version }}.dev0 -m "${{ env.new_full_version }}.dev0"
