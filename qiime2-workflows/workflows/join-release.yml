@@ -31,8 +31,3 @@ jobs:
           git commit --allow-empty -m "${{ env.release }}"
           git tag -a ${{ env.tag }} -m "${{ env.tag }}"
           git push --follow-tags
-
-      # - name: tag dev
-      # This will probably be another workflow that tags the release branch and
-      # keeps the tag up to date
-      # - name: tag release
