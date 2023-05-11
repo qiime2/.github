@@ -21,7 +21,7 @@ jobs:
         continue-on-error: true
 
       - name: Set default tag on error
-        if: steps.update-tag.outcome !- 'success'
+        if: steps.update-tag.outcome != 'success'
         uses: rmeneely/git-next-version@v1
         with:
           next_version: '${{ env.release }}.0'
