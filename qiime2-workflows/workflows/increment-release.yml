@@ -43,4 +43,4 @@ jobs:
         shell: bash
         run: |
           git tag -a ${{ env.incremented_tag }} -m "${{ env.incremented_tag }}"
-          git push --follow_tags
+          git push --follow-tags
