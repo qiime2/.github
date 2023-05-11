@@ -5,7 +5,8 @@ on:
     branches: '2023.5'
 
 env:
-  default: '2023.5.0'
+  release: '2023.5'
+  default_tag: '2023.5.0'
 
 
 jobs:
@@ -17,6 +18,10 @@ jobs:
 
       - name: Update tag
         id: update-tag
+        run: |
+            git config --global user.name "q2d2"
+            git config --global user.email "q2d2.noreply@gmail.com"
+            git checkout ${{ env.release }}
         uses: rmeneely/git-next-version@v1
         with:
           tag_pattern: '[0-9]*.[0-9]*.[0-9]*'
@@ -25,7 +30,5 @@ jobs:
       - name: Set default tag on error
         if: steps.update-tag.outcome != 'success'
         run: |
-          git config --global user.name "q2d2"
-          git config --global user.email "q2d2.noreply@gmail.com"
-          git tag -a ${{ env.default }} -m "${{ env.default }}"
+          git tag -a ${{ env.default_tag }} -m "${{ env.default_tag }}"
           git push --follow-tags

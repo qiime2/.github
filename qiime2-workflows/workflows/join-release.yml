@@ -5,7 +5,7 @@ on:
 
 env:
   release: '2023.5'
-  full_version: '2023.5.0'
+  tag: '2023.5.0.dev0'
 
 jobs:
   join:
@@ -29,7 +29,7 @@ jobs:
           git push --set-upstream origin ${{ env.release }}
           git checkout master
           git commit --allow-empty -m "${{ env.release }}"
-          git tag -a ${{ env.full_version }}.dev0 -m "${{ env.full_version }}.dev0"
+          git tag -a ${{ env.tag }} -m "${{ env.tag }}"
           git push --follow-tags
 
       # - name: tag dev
