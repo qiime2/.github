@@ -14,4 +14,5 @@ jobs:
           path: ./current-repo
 
       - uses: aurestic/incrementarl-create-release@master
-      
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
