@@ -25,7 +25,7 @@ jobs:
         id: update-tag
         shell: bash
         run: |
-          TAG=$(git tag --sort='committerdate' --merged | -tail -1)
+          TAG=$(git tag --sort='committerdate' --merged | tail -1)
 
           if [[ $TAG =~ ^${{ env.release }}.[0-9]+$ ]]
           then
