@@ -21,8 +21,6 @@ jobs:
       - name: Setup
         shell: bash
         run: |
-          cd ./current-repo
-          git checkout ${{ env.release }}
           git config --global user.name "q2d2"
           git config --global user.email "q2d2.noreply@gmail.com"
 
