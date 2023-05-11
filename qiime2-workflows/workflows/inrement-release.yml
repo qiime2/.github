@@ -26,7 +26,7 @@ jobs:
         id: get_last_tag
         shell: bash
         run: |
-          last_tag=$(git describe --abbrev=0 --tags 2>/dev/null || ${{ env.default_tag }})
+          last_tag=$(git describe --abbrev=0 --tags 2>/dev/null || "${{ env.default_tag }}")
           echo "::set-output name=tag::$last_tag"
 
       - name: Increment tag
