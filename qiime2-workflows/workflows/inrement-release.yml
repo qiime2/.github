@@ -1,0 +1,45 @@
+name: Increment Tag
+
+on:
+  push:
+    branches:
+      - '2023.5'
+
+env:
+  default_tag: '2023.5.0'
+
+jobs:
+  increment_tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup
+        shell: bash
+        run: |
+          git config --global user.name "q2d2"
+          git config --global user.email "q2d2.noreply@gmail.com"
+
+      - name: Get last tag
+        id: get_last_tag
+        shell: bash
+        run: |
+          last_tag=$(git describe --abbrev=0 --tags 2>/dev/null || ${{ env.default_tag }})
+          echo "::set-output name=tag::$last_tag"
+
+      - name: Increment tag
+        id: increment_tag
+        shell: bash
+        run: |
+          last_tag=${{ steps.get_last_tag.outputs.tag }}
+          IFS='.' read -r major minor patch <<< "$last_tag"
+          incremented_tag="$major.$minor.$((patch + 1))"
+          echo "::set-output name=tag::$incremented_tag"
+
+      - name: Create new tag
+        shell: bash
+        run: |
+          git tag ${{ steps.increment_tag.outputs.tag }}
+          git push origin ${{ steps.increment_tag.outputs.tag }}
