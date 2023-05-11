@@ -5,7 +5,7 @@ on:
     branches: '2023.5'
 
 env:
-  release: '2023.5'
+  default: '2023.5.0'
 
 
 jobs:
@@ -22,6 +22,6 @@ jobs:
 
       - name: Set default tag on error
         if: steps.update-tag.outcome != 'success'
-        uses: rmeneely/git-next-version@v1
-        with:
-          next_version: '${{ env.release }}.0'
+        run: |
+          git tag -a ${{ env.default }} -m "${{ env.default }}"
+          git push --follow-tags
