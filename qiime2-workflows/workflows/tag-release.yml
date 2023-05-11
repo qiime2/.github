@@ -15,18 +15,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Get on branch
-        shell: bash
-        run: |
-          git config --global user.name "q2d2"
-          git config --global user.email "q2d2.noreply@gmail.com"
-          git checkout ${{ env.release }}
-
       - name: Update tag
         id: update-tag
         uses: rmeneely/git-next-version@v1
         with:
-          tag_pattern: '[0-9]*.[0-9]*.[0-9]*'
+          tag_pattern: '+([0-9]).+([0-9]).+([0-9])'
         continue-on-error: true
 
       - name: Set default tag on error
