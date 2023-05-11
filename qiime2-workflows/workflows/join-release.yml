@@ -31,7 +31,7 @@ jobs:
           git checkout -b ${{ env.new_release }}
           git commit --allow-empty -m "${{ env.new_release }}"
           git tag -a ${{ env.new_release }} -m "${{ env.new_release }}"
-          git push --set-upstream origin {{ env.new_release }} --follow-tags
+          git push --set-upstream origin ${{ env.new_release }} --follow-tags
           git checkout master
           git commit --allow-empty -m "${{ env.new_release }}"
           git tag -a ${{ env.new_release }}.dev0 -m "${{ env.new_release }}.dev0"
