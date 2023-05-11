@@ -40,7 +40,7 @@ jobs:
             IFS='.' read -r major minor patch <<< "$last_tag"
             incremented_tag="$major.$minor.$((patch + 1))"
           else
-            incremented_tag=last_tag
+            incremented_tag=$last_tag
           fi
           echo "incremented_tag=$incremented_tag" >> "$GITHUB_ENV"
 
