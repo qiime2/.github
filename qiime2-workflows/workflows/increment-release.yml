@@ -16,12 +16,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.INSTALL_WORKFLOWS_PAT }}
+          path: ./current-repo
+
 
       - name: Setup
         shell: bash
         run: |
+          cd ./current-repo
           git config --global user.name "q2d2"
           git config --global user.email "q2d2.noreply@gmail.com"
+          git checkout ${{ env.release }}
 
       - name: Get last tag
         id: get_last_tag
