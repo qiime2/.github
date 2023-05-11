@@ -8,13 +8,13 @@ env:
   release: '2023.5'
   default_tag: '2023.5.0'
 
-
 jobs:
   tag:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
           token: ${{ secrets.INSTALL_WORKFLOWS_PAT }}
           path: ./current-repo
 
