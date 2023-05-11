@@ -4,7 +4,8 @@ on:
   workflow_dispatch: {}
 
 env:
-  new_release: '2023.5.0'
+  new_release: '2023.5'
+  new_full_version: '2023.5.0'
 
 jobs:
   join:
@@ -30,11 +31,11 @@ jobs:
           git config --global user.email "q2d2.noreply@gmail.com"
           git checkout -b ${{ env.new_release }}
           git commit --allow-empty -m "${{ env.new_release }}"
-          git tag -a ${{ env.new_release }} -m "${{ env.new_release }}"
+          git tag -a ${{ env.new_full_version }} -m "${{ env.new_full_version }}"
           git push --set-upstream origin ${{ env.new_release }} --follow-tags
           git checkout master
           git commit --allow-empty -m "${{ env.new_release }}"
-          git tag -a ${{ env.new_release }}.dev0 -m "${{ env.new_release }}.dev0"
+          git tag -a ${{ env.new_full_version }}.dev0 -m "${{ env.new_full_version }}.dev0"
           git push --follow-tags
 
       # - name: tag dev
