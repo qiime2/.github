@@ -1,13 +1,26 @@
 name: Tag a release
 
+env:
+  release: '2023.5'
+
 on:
   push:
-    branches: '2023.5'
+    branches: '${{ env.release }}'
 
 jobs:
   tag:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - uses: rmeneely/git-next-version@v1
+      - name: Update tag
+        id: update-tag
+        uses: rmeneely/git-next-version@v1
+        continue-on-error: true
+
+      - name: Set default tag on error
+        if: steps.update-tag.outcome !- 'success'
+        uses: rmeneely/git-next-version@v1
+        with:
+          next_version: '${{ env.release }}'
