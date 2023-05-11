@@ -41,6 +41,7 @@ jobs:
 
           NEW_TAG=${{ env.release }}.version
           git tag -a $NEW_TAG -m "$NEW_TAG"
+          git push --follow-tags
         continue-on-error: true
 
       - name: Set default tag on error
