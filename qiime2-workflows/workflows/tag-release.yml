@@ -26,6 +26,7 @@ jobs:
         shell: bash
         run: |
           TAG=$(git tag --sort='committerdate' --merged | tail -1)
+          echo $TAG
 
           if [[ $TAG =~ ^${{ env.release }}.[0-9]+$ ]]
           then
@@ -36,6 +37,7 @@ jobs:
           fi
 
           NEW_TAG=${{ env.release }}.version
+          echo $NEW_TAG
           git tag -a $NEW_TAG -m "$NEW_TAG"
           git push --follow-tags
         continue-on-error: true
