@@ -7,7 +7,7 @@ on:
 
 env:
   release: '2023.5'
-  default_tag: '2023.5.0'
+  default_tag: '2023.5.-1'
 
 jobs:
   increment_tag:
@@ -35,13 +35,8 @@ jobs:
         shell: bash
         run: |
           last_tag=${{ env.last_tag }}
-          if [ "$last_tag" !=  "${{ env.default_tag }}" ]
-          then
-            IFS='.' read -r major minor patch <<< "$last_tag"
-            incremented_tag="$major.$minor.$((patch + 1))"
-          else
-            incremented_tag=$last_tag
-          fi
+          IFS='.' read -r major minor patch <<< "$last_tag"
+          incremented_tag="$major.$minor.$((patch + 1))"
           echo "incremented_tag=$incremented_tag" >> "$GITHUB_ENV"
 
       - name: Create new tag
