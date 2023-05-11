@@ -23,5 +23,7 @@ jobs:
       - name: Set default tag on error
         if: steps.update-tag.outcome != 'success'
         run: |
+          git config --global user.name "q2d2"
+          git config --global user.email "q2d2.noreply@gmail.com"
           git tag -a ${{ env.default }} -m "${{ env.default }}"
           git push --follow-tags
