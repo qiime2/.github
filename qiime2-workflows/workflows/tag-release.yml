@@ -1,11 +1,12 @@
 name: Tag a release
 
+on:
+  push:
+    branches: '2023.5'
+
 env:
   release: '2023.5'
 
-on:
-  push:
-    branches: '${{ env.release }}'
 
 jobs:
   tag:
@@ -23,4 +24,4 @@ jobs:
         if: steps.update-tag.outcome !- 'success'
         uses: rmeneely/git-next-version@v1
         with:
-          next_version: '${{ env.release }}'
+          next_version: '${{ env.release }}.0'
