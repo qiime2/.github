@@ -1,4 +1,4 @@
-name: Increment Tag
+name: Increment Release
 
 on:
   push:
