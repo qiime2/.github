@@ -24,7 +24,6 @@ jobs:
         run: |
           git config --global user.name "q2d2"
           git config --global user.email "q2d2.noreply@gmail.com"
-          git fetch --tags origin ${{ env.release }}
 
       - name: Get last tag
         id: get_last_tag
