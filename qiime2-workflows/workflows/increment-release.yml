@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - 'Release-*'
-# Change this to run on commit to branch with name Release-* it can parse the stuff after
-# the - to get the release
-
-env:
-  release: '2023.5'
-  default_tag: '2023.5.-1'
 
 jobs:
   increment_tag:
@@ -26,6 +20,9 @@ jobs:
         run: |
           git config --global user.name "q2d2"
           git config --global user.email "q2d2.noreply@gmail.com"
+          IFS='-' read -r _ release <<< $(git branch)
+          echo "release=$release" >> $GITHUB_ENV
+          echo "default_tag=$release.-1" >> $GITHUB_ENV
 
       - name: Get last tag
         id: get_last_tag
