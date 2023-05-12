@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - '2023.5'
+# Change this to run on commit to branch with name Release-* it can parse the stuff after
+# the - to get the release
 
 env:
   release: '2023.5'
