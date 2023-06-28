@@ -1,0 +1,51 @@
+name: some dumb bullshit -anthony
+
+on:
+  workflow_dispatch: {}
+
+# CI HANDLES - NORMAL WORKFLOW
+# 1. PR wants to be merged into dev branch
+# 2. A commit has been created on a dev branch
+
+# NEWER DISTRO TRIAL FEATURE - NOT IMMEDIATELY NECESSARY
+# 3. A pull request against non-dev on a feature branch
+
+# DO NOTHING
+# 4. A commit has been created on a non-dev branch (we do nothing here)
+
+env:
+  distros: '[ "core" ]'
+  channel_prefix: '[Conda Channel]'
+
+jobs:
+  distro-lookup:
+    runs-on: 'ubuntu-latest'
+    outputs:
+      distros: ${{ steps.lookup.outputs.distros }}
+    steps:
+      - id: 'lookup'
+        shell: bash
+        run: |
+          echo 'distros=${{ env.distros }}' > $GITHUB_OUTPUT
+  evaluate-matrix:
+    needs: 'distro-lookup'
+    strategy:
+      matrix:
+        os: ['ubuntu-latest', 'osx-latest']
+        distro: ${{ fromJSON(needs.distro-lookup.outputs.distros) }}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - id: 'run-root-alp'
+        uses: 'qiime2/action-library-packaging@beta'
+        with:
+          channel: './channel-${{ matrix.distro }}'
+          channel-name: '${{ env.channel_prefix }} ${{ matrix.distro }}'
+  notify-library:
+    needs: ['distro-lookup', 'evaluate-matrix']
+    runs-on: 'ubuntu-latest'
+    steps:
+      - id: 'notify'
+        uses: 'qiime2/action-library-packaging/notify-library@beta'
+        with:
+          distros: ${{ needs.distro-lookup.outputs.distros }}
+          artifact-prefix: ${{ env.channel_prefix }}
