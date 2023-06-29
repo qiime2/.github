@@ -36,7 +36,8 @@ jobs:
         os: ['ubuntu-latest', 'osx-latest']
         distro: ${{ fromJSON(needs.distro-lookup.outputs.distros) }}
     runs-on: ${{ matrix.os }}
-
+  # These outputs get overwritten per matrix iteration, while the package
+  # details (i.e. name/version) remain the same across each iteration
     steps:
       - id: 'run-root-alp'
         uses: 'qiime2/action-library-packaging@beta'
@@ -78,6 +79,8 @@ jobs:
           LIBRARY_TOKEN: ${{ secrets.LIBRARY_TOKEN }}
         uses: 'qiime2/action-library-packaging/notify-library@beta'
         with:
+          package-name: # TBD
+          package-version: # TBD
           build-target: 'dev'
           distro: ${{ matrix.distro }}
           artifact: '${{ env.channel_prefix }} ${{ matrix.distro }}'
