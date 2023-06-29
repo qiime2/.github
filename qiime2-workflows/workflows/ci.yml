@@ -79,5 +79,5 @@ jobs:
         uses: 'qiime2/action-library-packaging/notify-library@beta'
         with:
           build-target: 'dev'
-          distros: ${{ needs.distro-lookup.outputs.distros }}
-          artifact-prefix: ${{ env.channel_prefix }}
+          distro: ${{ matrix.distro }}
+          artifact: '${{ env.channel_prefix }} ${{ matrix.distro }}'
