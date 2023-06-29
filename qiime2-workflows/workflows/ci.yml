@@ -1,4 +1,4 @@
-name: some dumb bullshit -anthony
+name: ''
 
 on:
   workflow_dispatch: {}
@@ -22,11 +22,13 @@ jobs:
     runs-on: 'ubuntu-latest'
     outputs:
       distros: ${{ steps.lookup.outputs.distros }}
+
     steps:
       - id: 'lookup'
         shell: bash
         run: |
           echo 'distros=${{ env.distros }}' > $GITHUB_OUTPUT
+
   evaluate-matrix:
     needs: 'distro-lookup'
     strategy:
@@ -34,18 +36,48 @@ jobs:
         os: ['ubuntu-latest', 'osx-latest']
         distro: ${{ fromJSON(needs.distro-lookup.outputs.distros) }}
     runs-on: ${{ matrix.os }}
+
     steps:
       - id: 'run-root-alp'
         uses: 'qiime2/action-library-packaging@beta'
         with:
           channel: './channel-${{ matrix.distro }}'
-          channel-name: '${{ env.channel_prefix }} ${{ matrix.distro }}'
+
+      - uses: actions/upload-artifact@v3
+        name: 'Upload channel'
+        with:
+          name: '${{ env.channel_prefix }} ${{ matrix.distro }}'
+          path: './channel-${{ matrix.distro }}'
+
   notify-library:
     needs: ['distro-lookup', 'evaluate-matrix']
+    strategy:
+      matrix:
+        distro: ${{ fromJSON(needs.distro-lookup.outputs.distros) }}
     runs-on: 'ubuntu-latest'
+
     steps:
+      - uses: actions/download-artifact@v3
+        name: 'Download channel'
+        with:
+          name: '${{ env.channel_prefix }} ${{ matrix.distro }}'
+          path: './channel-${{ matrix.distro }}'
+
+      - id: 're-index'
+        shell: bash
+        run: conda index './channel-${{ matrix.distro }}'
+
+      - uses: actions/upload-artifact@v3
+        name: 'Upload channel'
+        with:
+          name: '${{ env.channel_prefix }} ${{ matrix.distro }}'
+          path: './channel-${{ matrix.distro }}'
+
       - id: 'notify'
+        env:
+          LIBRARY_TOKEN: ${{ secrets.LIBRARY_TOKEN }}
         uses: 'qiime2/action-library-packaging/notify-library@beta'
         with:
+          build-target: 'dev'
           distros: ${{ needs.distro-lookup.outputs.distros }}
           artifact-prefix: ${{ env.channel_prefix }}
