@@ -6,7 +6,7 @@ Regardless of your background, we'd love to help you figure out how to contribut
 
 ## I just have a question
 
-If you have a question or need help with QIIME 2, refer instead to our [Support Guidelines](./SUPPORT.md).
+If you have a question or need help with QIIME 2, refer instead to our [Support Guidelines](https://github.com/qiime2/.github/blob/main/SUPPORT.md).
 
 ## Contributing to repositories in the `qiime2` GitHub organization
 
