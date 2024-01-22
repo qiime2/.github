@@ -75,8 +75,8 @@ https://www.contributor-covenant.org/faq
 
 ## Footnotes
 
-[^1] At present, this address is monitored by Greg Caporaso. It is in no way ideal
-for reporting to go to one recipient only (for CoC violation reporters or for the
-individual monitoring reports). We are working toward development of a Code of
-Conduct committee that will have a rotating membership, always with multiple
+[^1] At present, this address is monitored by Greg Caporaso and Liz Gehret.
+It is not ideal for reporting to go only to members of one research team. As
+of January 2024, we are working toward development of a Code of Conduct
+committee that will have a rotating membership, always with multiple
 members who all will monitor this email address.

@@ -1,8 +1,8 @@
 # Contributing to the QIIME 2 Ecosystem
 
 There are many ways to contribute to the QIIME 2 ecosystem, and you don't have to be a software developer to help out!
-Contributions can come in the form of: new documentation; improvements to existing documentation; assistance with technical support on the [QIIME 2 Forum](https://forum.qiime2.org); new features, bug fixes, or usabililty improvements to existing functionality; development of new plugins or interfaces; providing constructive feedback on how we can improve QIIME 2; and other ways.
-So regardless of your background, we'd love to help you figure out how to contribute.
+Contributions can come in the form of: new documentation; improvements to existing documentation; assistance with technical support on the [QIIME 2 Forum](https://forum.qiime2.org); code providing new features, bug fixes, or usabililty improvements to existing functionality; reporting of bugs or feature requests on the project's GitHub issue trackers; development of new plugins or interfaces; providing constructive feedback on how we can improve QIIME 2; and other ways.
+Regardless of your background, we'd love to help you figure out how to contribute.
 
 ## I just have a question
 
