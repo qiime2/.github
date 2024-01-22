@@ -3,7 +3,7 @@
 ## QIIME 2 Users
 
 If you're interested in learning QIIME 2, start with the [QIIME 2 User Documentation](https://docs.qiime2.org) and/or the [QIIME 2 YouTube channel](https://youtube.com/qiime2).
-Here you'll find hands-on tutorials as well and video lectures on specific QIIME 2 related topics, or entire QIIME 2 courses.
+Here you'll find hands-on tutorials as well as video lectures on specific QIIME 2 related topics, or entire QIIME 2 courses.
 If you still need help after reviewing this content, please visit us at the [QIIME 2 Forum](https://forum.qiime2.org/) where you can search for answers to your questions, or post new questions if you don't find existing answers.
 
 ## QIIME 2 Developers
