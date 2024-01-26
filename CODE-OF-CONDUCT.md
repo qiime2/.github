@@ -75,8 +75,10 @@ https://www.contributor-covenant.org/faq
 
 ## Footnotes
 
-[^1] At present, this address is monitored by Greg Caporaso and Liz Gehret.
-It is not ideal for reporting to go only to members of one research team. As
-of January 2024, we are working toward development of a Code of Conduct
-committee that will have a rotating membership, always with multiple
-members who all will monitor this email address.
+[^1] At present, this address is monitored by Colin Brislawn, Greg Caporaso
+and Liz Gehret. As of January 2024, we are working toward development of a
+Code of Conduct Committee that will have a rotating membership, always with
+multiple members who all will monitor this email address. **If you would
+consider serving a 6-month or 12-month term on the QIIME 2 Code of Conduct
+Committee, please reach out at code-of-conduct@qiime2.org. We'll be happy to
+answer any questions you have about what is involved.**
