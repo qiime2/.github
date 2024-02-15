@@ -41,7 +41,7 @@ You don't need approval from existing QIIME 2 developers or maintainers to creat
 We encourage you to build your own.
 [Developing with QIIME 2](https://cap-lab.bio/developing-with-qiime2/) is the primary resource for learning how to build and share your QIIME 2-based tools, and we are happy to support developers in the [Developer Discussion on the QIIME 2 Forum](https://forum.qiime2.org/c/dev-discussion).
 
-You can build your QIIME 2 tools in your own way - your new tool doesn't need to live in our GitHub organization or be part of one of the QIIME 2 distributions developed and maintained in the [Caporaso Lab](https://cap-lab.bio), and in fact it's better for it to start independently.
+You can build your QIIME 2 tools in your own way - your new tool doesn't need to live in our GitHub organization or be part of one of the QIIME 2 distributions developed and maintained in the [Caporaso Lab](https://cap-lab.bio).
 You can use the [Community Contributions topic on the QIIME 2 Forum](https://forum.qiime2.org/c/community-contributions/15) to share your plugins with QIIME 2 users.
 You can also have your users request help on the QIIME 2 Forum, but be aware that the forum moderators will almost certainly reach out to you to reply to help requests since they won't necessarily be experts in your tools (and are already tied up providing tech support to the community).
 
