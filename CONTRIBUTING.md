@@ -20,6 +20,8 @@ These are in place to respect everyone's time: yours as the contributor, and our
 3. If approved, you can begin working on your contribution.
    **Maintainer approval of your issue is a commitment to a timely review of your contribution**, so this should move forward at an acceptable pace from this point.
    You can find documentation on setting up your QIIME 2 development environment in [Developing with QIIME 2](https://cap-lab.bio/developing-with-qiime2/).
+4. When you have a final draft of your code that you think is ready for review, you can [submit a pull request](https://docs.github.com/en/pull-requests).
+   Just as we commit to a timely review of your code when we approve your issue, **our expectation is that if you submit a pull request you'll be responsive to feedback that we give in a timely manner**.
 
 **Pull requests that are submitted without going through this process may be closed without review.**
 
@@ -28,7 +30,7 @@ For those, you can go ahead and just submit a pull request.
 If you're not sure if your change would be considered a low-impact modification, follow the steps above.
 Anything that changes code would not be considered a low-impact modification and should go through the above process.
 
-Again, this process is designed primarily to avoid wasted time on your part - for example, to prevent you from doing work that would sit without review for an unacceptable amount of time, or just wouldn't end up being merged because it adds functionality that is not aligned with planned directions for the repository.
+Again, this process is designed primarily to avoid wasted time, on your end and on our end. For example, this process will prevent you from doing work that would sit without review for an unacceptable amount of time, or just wouldn't end up being merged because it adds functionality that is not aligned with planned directions for the repository.
 
 If you're looking to develop new analytic functionality, we *strongly* encourage you to consider building and distributing your own QIIME 2 plugin(s) as opposed to starting with contributions to the plugins in this organization.
 That allows you to move quickly and doesn't require any feedback or review from the QIIME 2 team (but we're of course happy to provide support and feedback on the QIIME 2 Forum).
