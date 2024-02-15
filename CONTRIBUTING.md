@@ -41,7 +41,30 @@ You don't need approval from existing QIIME 2 developers or maintainers to creat
 We encourage you to build your own.
 [Developing with QIIME 2](https://cap-lab.bio/developing-with-qiime2/) is the primary resource for learning how to build and share your QIIME 2-based tools, and we are happy to support developers in the [Developer Discussion on the QIIME 2 Forum](https://forum.qiime2.org/c/dev-discussion).
 
-You can build your QIIME 2 tools in your own way - your new tool doesn't need to live in our GitHub organization, or be part of one of the existing QIIME 2 distributions, and in fact it's probably better for it to start independently.
-The *tiny* and *amplicon* distributions, in particular, are focused on providing a stable and reliable experience to their many users all over the world, and as a result change fairly slowly.
-If you're working on cutting edge tools that are evolving rapidly, you should build those on your own and can share them with the community as [Community Contributions on the QIIME 2 Forum](https://forum.qiime2.org/c/community-contributions/15).
+You can build your QIIME 2 tools in your own way - your new tool doesn't need to live in our GitHub organization or be part of one of the QIIME 2 distributions developed and maintained in the [Caporaso Lab](https://cap-lab.bio), and in fact it's better for it to start independently.
+You can use the [Community Contributions topic on the QIIME 2 Forum](https://forum.qiime2.org/c/community-contributions/15) to share your plugins with QIIME 2 users.
 You can also have your users request help on the QIIME 2 Forum, but be aware that the forum moderators will almost certainly reach out to you to reply to help requests since they won't necessarily be experts in your tools (and are already tied up providing tech support to the community).
+
+### Guidance on maximizing compatibility between your plugin(s) and existing QIIME 2 distribution(s)
+
+If you want your QIIME 2 plugin(s) to work with existing QIIME 2 distribution(s), your focus should be on maximizing compatibility between your plugin(s) and the relevant QIIME 2 distribution(s).
+To do this, you should observe the types and formats that are used in the target distribution(s), and make your functionality compatible with those.
+Avoid defining new types and formats when you can reuse existing ones, to maximize compatibility.
+If you do need to create new types and formats, you can do that in your plugin(s).
+
+The Caporaso Lab is not taking on new responsibility for distributing plugins right now (i.e., integrating them in the conda metapackages they develop and maintain; note that "conda metapackage" and "distribution" are essentially synonymous in this context).
+You should consider those existing distributions to be foundations that you can build on with your plugin(s), or you can create and distribute your own conda metapackages. Guidance on each of these approaches:
+   - Your install instructions can indicate that a user should install whichever distribution you depend on (tiny, amplicon, shotgun, ...) and then illustrate how to install your plugin(s) in that environment however it makes sense (conda, pip, ...).
+   - Alternatively, you can compose and share your own distribution of plugins (e.g., building from the tiny distribution) that captures the set of functionality you’d like to share.
+   - Either of these approaches are totally fine. The former is an easier starting point.
+
+The weekly dev builds of the QIIME 2 distributions can help you make sure your code stays current with the distribution(s) you are targeting as you can automate your testing against them.
+See [here](https://cap-lab.bio/developing-with-qiime2/plugins/how-to-guides/set-up-development-environment.html) for instructions on setting up a development environment (that documentation URL is subject to change while *[Developing with QIIME 2](https://cap-lab.bio/developing-with-qiime2/)* is being written).
+Following those instructions will install the most recent successful development metapackage build (again, usually weekly, but sometimes they fail).
+
+You can request feedback on your plugin as a whole from more experienced QIIME 2 developers by reaching out on the [Developer Discussion on the QIIME 2 Forum](https://forum.qiime2.org/c/dev-discussion).
+However, be cognizant of the fact that doing code review takes a long time to do well: you should request this when you feel like you have a final draft of the plugin that you'd like to release.
+Please have others who you work closely with -- ideally experienced software developers, and even more ideally experienced QIIME 2 plugin developers -- review it first.
+If you have questions along the way, you can ask those whenever - just be sure to review *[Developing with QIIME 2](https://cap-lab.bio/developing-with-qiime2/)* and search the forum in case we've already answered your question somewhere.
+
+Thanks for your interest in building with QIIME 2 -- see you on the QIIME 2 Forum! 🚀
