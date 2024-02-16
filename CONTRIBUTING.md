@@ -61,8 +61,7 @@ The Caporaso Lab is not taking on new responsibility for distributing plugins ri
 You should consider those existing distributions to be foundations that you can build on with your plugin(s), or you can create and distribute your own conda metapackages. Guidance on each of these approaches:
    - Your install instructions can indicate that a user should install whichever distribution you depend on (tiny, amplicon, shotgun, ...) and then illustrate how to install your plugin(s) in that environment however it makes sense (conda, pip, ...).
    - Alternatively, you can compose and share your own distribution of plugins (e.g., building from the tiny distribution) that captures the set of functionality you’d like to share.
-   - Either of these approaches is totally fine.
-     The former is an easier starting point.
+   - Either of these approaches is totally fine. The former is an easier starting point.
 
 The weekly dev builds of the QIIME 2 distributions can help you make sure your code stays current with the distribution(s) you are targeting as you can automate your testing against them.
 See [here](https://cap-lab.bio/developing-with-qiime2/plugins/how-to-guides/set-up-development-environment.html) for instructions on setting up a development environment (that documentation URL is subject to change while *[Developing with QIIME 2](https://cap-lab.bio/developing-with-qiime2/)* is being written).
