@@ -39,8 +39,7 @@ We cover that briefly in the next section, and in more detail in [Developing wit
 
 ## Building your own plugins and interfaces
 
-You don't need approval from existing QIIME 2 developers or maintainers to create and distribute your own tools, such as plugins, that build on QIIME 2.
-This is the beauty of the plugin-based architecture of QIIME 2: development of tools for introducing novel functionality can be distributed by anyone, removing the lead development team as a bottleneck or gatekeeper between developers of new functionality and users interested in that functionality, and customized QIIME 2 distributions can be created and shared by users.
+You don't need approval from existing QIIME 2 developers or maintainers to create and distrubute your own tools, such as plugins, that build on QIIME 2. This is the beauty of the plugin-based architecture of QIIME 2, that development of tools for introducing novel functionality can be distributed, and individual QIIME installations can be customized by users.
 We encourage you to build your own tools if you would like to introduce new functionality into the QIIME 2 ecosystem, or alter the functionality of existing plugins or interfaces.
 [Developing with QIIME 2](https://cap-lab.bio/developing-with-qiime2/) is the primary resource for learning how to build and share your QIIME 2-based tools, and we are happy to support developers in the [Developer Discussion on the QIIME 2 Forum](https://forum.qiime2.org/c/dev-discussion).
 
