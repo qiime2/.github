@@ -53,8 +53,7 @@ Please be aware that the forum moderators will not be able to provide support fo
 
 If you want your QIIME 2 plugin(s) to work with existing QIIME 2 distribution(s), your focus should be on maximizing compatibility between your plugin(s) and the relevant QIIME 2 distribution(s).
 To do this, you should observe the types and formats that are used in the target distribution(s), and make your functionality compatible with those.
-Avoid defining new types and formats when you can reuse existing ones, to maximize compatibility and interoperability (as well as reducing your own time cost!).
-A partial list of common semantic types can be found in the [QIIME 2 documentation](https://docs.qiime2.org/), and a complete list of types and formats available in a local installation of QIIME 2 can be accessed with the `qiime tools list-types` and `qiime tools list-formats` commands.
+Avoid defining new types and formats when you can reuse existing ones, to maximize compatibility and interoperability (as well as reducing your own time cost!). A partial list of common semantic types can be found in the [QIIME 2 documentation](https://docs.qiime2.org/), and a complete list of types and formats available in a local installation of QIIME 2 can be accessed with the `qiime tools list-types` and `qiime tools list-formats` commands.
 If you do need to create new types and formats, you can add these directly in your own plugin(s).
 
 The Caporaso Lab is not taking on new responsibility for distributing plugins right now (i.e., integrating them in the conda metapackages they develop and maintain; note that "conda metapackage" and "distribution" are essentially synonymous in this context).
