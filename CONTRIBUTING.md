@@ -46,8 +46,7 @@ We encourage you to build your own tools if you would like to introduce new func
 
 You can build your QIIME 2 tools in your own way - your new tool doesn't need to live in our GitHub organization or be part of one of the QIIME 2 distributions developed and maintained in the [Caporaso Lab](https://cap-lab.bio).
 You can use the [Community Contributions topic on the QIIME 2 Forum](https://forum.qiime2.org/c/community-contributions/15) to share your plugins with QIIME 2 users.
-You can also have your users request help on the QIIME 2 Forum, but if you go this route (as opposed to, for example, directing users to your email, GitHub issue tracker, or another forum for technical support) you should monitor the forum (e.g., via forum notifications) to answer user questions about your plugin. 
-Please be aware that the forum moderators will not be able to provide support for your plugins and may reach out to you to reply to help requests since they won't necessarily be experts in your tools (and are already tied up providing tech support to the community).
+You can also have your users request help on the QIIME 2 Forum, but you should monitor the forum to answer user questions about your plugin (e.g., by setting notifications). Please be aware that the forum moderators will not be able to provide support for your plugins and may reach out to you to reply to help requests since they won't necessarily be experts in your tools (and are already tied up providing tech support to the community).
 
 ### Guidance on maximizing compatibility between your plugin(s) and existing QIIME 2 distribution(s)
 
