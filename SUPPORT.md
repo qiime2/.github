@@ -8,7 +8,7 @@ If you still need help after reviewing this content, please visit us at the [QII
 
 ## QIIME 2 Developers
 
-Check out [Developing with QIIME 2](https://cap-lab.bio/developing-with-qiime2/), which provides tutorials and other documentation on building QIIME 2 plugins and interfaces, and contributing to the QIIME 2 framework or documentation.
+Check out [Developing with QIIME 2](https://develop.qiime2.org/), which provides tutorials and other documentation on building QIIME 2 plugins and interfaces, and contributing to the QIIME 2 framework or documentation.
 If you still need help, please visit us in the [Developer Discussion on the QIIME 2 Forum](https://forum.qiime2.org/c/dev-discussion).
 
 ## Reporting bugs or requesting new features
