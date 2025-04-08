@@ -2,13 +2,17 @@
 
 ## QIIME 2 Users
 
-If you're interested in learning QIIME 2, start with the [QIIME 2 User Documentation](https://docs.qiime2.org) and/or the [QIIME 2 YouTube channel](https://youtube.com/qiime2).
-Here you'll find hands-on tutorials as well as video lectures on specific QIIME 2 related topics, or entire QIIME 2 courses.
-If you still need help after reviewing this content, please visit us at the [QIIME 2 Forum](https://forum.qiime2.org/) where you can search for answers to your questions, or post new questions if you don't find existing answers.
+Are you looking for:
+- the QIIME 2 homepage? That's [https://qiime2.org](https://qiime2.org).
+- learning resources for microbiome marker gene (i.e., amplicon) analysis? See the [QIIME 2 *amplicon distribution* documentation](https://amplicon-docs.readthedocs.io).
+- learning resources for microbiome metagenome analysis? See the [MOSHPIT documentation](https://moshpit.readthedocs.io).
+- learning resources for the QIIME 2 Framework (Q2F)? See [Using QIIME 2](https://use.qiime2.org).
+- installation instructions, plugins, books, videos, workshops, or resources? See the [QIIME 2 Library](https://library.qiime2.org).
+- general help? See the [QIIME 2 Forum](https://forum.qiime2.org).
 
 ## QIIME 2 Developers
 
-Check out [Developing with QIIME 2](https://develop.qiime2.org/), which provides tutorials and other documentation on building QIIME 2 plugins and interfaces, and contributing to the QIIME 2 framework or documentation.
+Check out [Developing with QIIME 2](https://develop.qiime2.org/), which provides tutorials and other documentation for developers.
 If you still need help, please visit us in the [Developer Discussion on the QIIME 2 Forum](https://forum.qiime2.org/c/dev-discussion).
 
 ## Reporting bugs or requesting new features
