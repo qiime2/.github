@@ -65,7 +65,7 @@ You should consider those existing distributions to be foundations that you can 
      The former is an easier starting point.
 
 The weekly dev builds of the QIIME 2 distributions can help you make sure your code stays current with the distribution(s) you are targeting as you can automate your testing against them.
-See [here](https://develop.qiime2.org/en/latest/plugins/how-to-guides/set-up-development-environment.html) for instructions on setting up a development environment (that documentation URL is subject to change while *[Developing with QIIME 2](https://develop.qiime2.org/)* is being written).
+See [here](https://develop.qiime2.org/en/stable/plugins/how-to-guides/set-up-development-environment.html) for instructions on setting up a development environment (that documentation URL is subject to change while *[Developing with QIIME 2](https://develop.qiime2.org/)* is being written).
 Following those instructions will install the most recent successful development metapackage build (again, usually weekly, but sometimes they fail).
 
 You can request feedback on your plugin as a whole from more experienced QIIME 2 developers by reaching out on the [Developer Discussion on the QIIME 2 Forum](https://forum.qiime2.org/c/dev-discussion).
